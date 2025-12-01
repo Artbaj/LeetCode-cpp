@@ -7,7 +7,7 @@ public:
         
 
         for(int i=0;i<cost.size();i++){
-            if(i%3!=2){
+            if(i%3!=cost.size()%3){
                 price+=cost[i];
             }
         }
