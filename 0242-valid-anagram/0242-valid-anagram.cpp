@@ -7,13 +7,14 @@ public:
            for(auto& c:t){
                 map[c]++;
            }
-        }
-        for(auto& c:s){
+           for(auto& c:s){
             if((map.find(c)!=map.end())&&map[c]!=0){
                 map[c]--;
             }
             else return false;
         }
+        }
+        
         return true;
         
     }
