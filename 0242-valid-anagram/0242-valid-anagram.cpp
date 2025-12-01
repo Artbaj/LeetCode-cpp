@@ -9,7 +9,7 @@ public:
                 map[s.at(i)]--;
             }
         }
-        for(auto& p:map){
+        for(auto p:map){
             if(p.second!=0) return false;
         }
         return true;
