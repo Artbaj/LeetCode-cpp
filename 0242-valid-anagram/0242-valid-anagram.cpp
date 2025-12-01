@@ -4,13 +4,15 @@ public:
         unordered_map<char,int> map;
         if(s.length()!=t.length()) return false;
         else{
-            for(int i=0;i<t.length();i++){
-                map[t.at(i)]++;
-                map[s.at(i)]--;
-            }
+           for(auto& c:t){
+                map[c]++;
+           }
         }
-        for(auto& p:map){
-            if(p.second!=0) return false;
+        for(auto& c:s){
+            if((map.find(c)!=map.end())&&map[c]!=0){
+                map[c]--;
+            }
+            else return false;
         }
         return true;
         
